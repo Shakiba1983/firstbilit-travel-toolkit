@@ -21,7 +21,7 @@ The project currently includes a simple travel checklist generator that creates 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/firstbilit-travel-toolkit.git
+git clone https://github.com/Shakiba1983/firstbilit-travel-toolkit.git
 ```
 
 Enter the project directory:

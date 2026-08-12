@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="ابزار رایگان ساخت چک‌لیست سفر فرست بلیط"
+  >
+
+  <title>FirstBilit Travel Checklist</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+      background: #f5f7fa;
+      color: #17202a;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 40px auto;
+    }
+
+    .hero {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    .hero p {
+      line-height: 1.9;
+      color: #59636e;
+    }
+
+    .form {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    select,
+    input,
+    button {
+      width: 100%;
+      padding: 13px;
+      border-radius: 10px;
+      border: 1px solid #d7dce1;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: #1f6feb;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .result {
+      margin-top: 24px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      background: #f8fafc;
+      border: 1px solid #e5e9ee;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 10px;
+    }
+
+    .checklist label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    .checklist input {
+      width: auto;
+      margin: 0;
+    }
+
+    .links {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .links a {
+      display: block;
+      margin: 12px 0;
+      color: #1f6feb;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      padding: 30px 0;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <h1>
+        ✈️ FirstBilit Travel Checklist
+      </h1>
+
+      <p>
+        یک ابزار ساده و رایگان برای آماده‌سازی
+        چک‌لیست سفر بر اساس مقصد و مدت اقامت.
+      </p>
+
+      <p>
+        این پروژه به صورت متن‌باز منتشر شده و
+        برای کمک به مسافران در آماده‌سازی سفر طراحی شده است.
+      </p>
+
+    </section>
+
+    <section class="form">
+
+      <label for="destination">
+        مقصد سفر
+      </label>
+
+      <select id="destination">
+        <option value="istanbul">
+          🇹🇷 استانبول
+        </option>
+
+        <option value="dubai">
+          🇦🇪 دبی
+        </option>
+
+        <option value="general">
+          🌍 سفر عمومی
+        </option>
+      </select>
+
+      <label for="days">
+        مدت سفر (روز)
+      </label>
+
+      <input
+        id="days"
+        type="number"
+        min="1"
+        max="60"
+        value="5"
+      >
+
+      <button id="generate">
+        ساخت چک‌لیست سفر
+      </button>
+
+      <div
+        id="result"
+        class="result"
+      ></div>
+
+    </section>
+
+    <section class="links">
+
+      <h2>
+        📚 منابع سفر
+      </h2>
+
+      <a
+        href="https://firstbilit.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🌐 وب‌سایت FirstBilit
+      </a>
+
+      <a
+        href="https://firstbilit.com/magazine/trainpresell"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🚆 راهنمای پیش‌فروش بلیط قطار
+      </a>
+
+      <a
+        href="https://firstbilit.com/tours/tour-istanbul"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🇹🇷 تور استانبول
+      </a>
+
+      <a
+        href="https://firstbilit.com/tours/tour-dubi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🇦🇪 تور دبی
+      </a>
+
+    </section>
+
+    <footer>
+
+      FirstBilit Travel Toolkit
+
+      <br>
+
+      Open-source travel planning project.
+
+    </footer>
+
+  </main>
+
+  <script
+    type="module"
+    src="./src/app.js"
+  ></script>
+
+</body>
+</html>
